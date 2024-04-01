@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'poppinsregular';
+  src: url('./pages/fonts/poppins-regular-webfont.woff') format('woff2'),
+       url('./pages/fonts/poppins-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppinssemibold';
+  src: url('./pages/fonts/poppins-semibold-webfont.woff2') format('woff2'),
+       url('./pages/fonts/poppins-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppinsbold';
+  src: url('./pages/fonts/poppins-bold-webfont.woff2') format('woff2'),
+       url('./pages/fonts/poppins-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #f08b0a !default;
+$yellow:  #f08b0a !default;
+$dark_orange:  #df6c16 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+$grey_light:  #eeeeee !default;
+$grey_dark:  #bbbbbb !default;
+$black:  #000000 !default;
+$white:  #ffffff !default;
+
+// scss-docs-start theme-color-variables
+$primary:       $orange !default;
+$secondary:     $dark_orange !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $grey_light;
+$dark:          $grey_dark !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+// scss-docs-end theme-colors-map
+
+
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $grey_light,
+  "gray-dark":  $grey_dark
+) !default;
+// scss-docs-end colors-map
+
+
+.btn-primary{
+  background-color: $primary !important;
+  border-color: $primary !important;
+  font-size: 0.9rem;
+  padding: 10px 20px 5px;
+  &:hover{
+    background-color: $secondary !important;
+    border-color: $secondary !important;
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: 'poppinsregular', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.9rem;
+}
+tbody, td, tfoot, th, thead, tr {
+  border-color: #eee;
+}
+body{
+  background: #ecf5fd;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: 'poppinssemibold';
+}
+.h3, h3 {
+  font-size: 1.3rem;
+  color: #444;
+}
+a{
+  color: $primary;
+}
+a:hover{
+  color: $secondary;
+}
+img{
+  max-width: 100%;
+}

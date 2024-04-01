@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.top-loader {
+  display: none;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 125px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: center;
+  background: #343a40;
+  color: white;
+  font-size: 12px;
+  padding: 3px 0;
+  z-index: 1000000;
+}
+
+.loading-indicator {
+  .top-loader {
+    display: block;
+  }
+  .whole-content {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}
+
+.float-icon {
+  position: relative;
+  svg.eye {
+    position: absolute;
+    right: 0.5rem;
+    opacity: 0.5;
+    top: 2.5rem;
+    width: 2rem;
+  }
+}
+
+.error_text {
+  color: red;
+}
+
+.form-control {
+  padding: 0.8rem 0.75rem 0.5rem 0.75rem;
+}
