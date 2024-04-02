@@ -1,4 +1,4 @@
-import cogoToast from "cogo-toast";
+import toast from "react-hot-toast";
 
 const responseMsg = [
   {
@@ -44,5 +44,5 @@ export const responseToastMsg = (err_code) => {
   console.log("🚀 ~ responseToastMsg ~ err_code:", err_code);
   const info = responseMsg.find((o) => o.code === err_code);
   console.log("🚀 ~ responseToastMsg ~ info:", info);
-  cogoToast[info.type](info.message);
+  toast[info.type](info.message);
 };

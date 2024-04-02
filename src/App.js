@@ -6,8 +6,8 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-// import { Auth0Provider } from "@auth0/auth0-react";
 
+import { Toaster } from "react-hot-toast";
 import SignUp from "./pages/signup";
 import Login from "./pages/login";
 
@@ -22,24 +22,6 @@ import { getCookies } from "./utils/cookies";
 import { user_logout_thunk } from "./redux/thunk/user-thunk";
 
 let AuthContext = React.createContext(null);
-
-function AuthProvider({ children }) {
-  let [user, setUser] = React.useState(null);
-
-  let signin = (newUser, callback) => {
-    setUser(newUser);
-    callback();
-  };
-
-  let signout = (callback) => {
-    setUser(null);
-    callback();
-  };
-
-  let value = { user, signin, signout };
-
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
 
 export function useAuth() {
   return React.useContext(AuthContext);
@@ -76,6 +58,7 @@ function App() {
           {/* </AuthProvider> */}
           {/* </Auth0Provider> */}
         </BrowserRouter>
+        <Toaster />
       </div>
     </>
   );

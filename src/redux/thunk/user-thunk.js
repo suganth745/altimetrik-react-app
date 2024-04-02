@@ -1,4 +1,3 @@
-import cogoToast from "cogo-toast";
 import { allUsersApi, loginApi, updateUserApi } from "../../api/methods";
 import { setCookies, removeCookies } from "../../utils/cookies";
 import { responseToastMsg } from "../../utils/response-message";
